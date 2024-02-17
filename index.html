@@ -17,20 +17,23 @@
     .social-links a {
       margin-right: 15px;
       color: #007bff;
+      font-size: 30px; /* Increased icon size */
     }
     .rounded-circle {
       width: 250px;
       height: 250px;
       object-fit: cover;
-      border-radius: 100%;
-    }
-    .project {
-      margin-bottom: 15px;
+      border-radius: 50%; /* Ensures the image is circular */
+      margin-bottom: 20px; /* Adds some space below the image */
     }
     .project-img {
-      width: 100%;
+      width: 100px; /* Smaller width for project images */
       height: auto;
       border-radius: 5px;
+      margin-right: 15px; /* Space between image and text */
+    }
+    .project-content {
+      padding-left: 15px; /* Ensures text doesn't touch the image */
     }
     footer {
       margin-top: 40px;
@@ -39,15 +42,10 @@
       padding: 10px 0;
       text-align: center;
     }
-    .social-links a i {
-    font-size: 40px; /* Adjust the size as needed */
-    margin-right: 10px; /* Adds spacing between icons */
-  }
   </style>
- <!-- 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">Chika Maduabuchi</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,7 +53,7 @@
       </button>
     </div>
   </nav>
- -->
+
   <div class="container mt-5">
     <div class="row g-3 align-items-center">
       <div class="col-md-4 text-center">
@@ -65,45 +63,86 @@
         <h1>Chika Maduabuchi</h1>
         <p>
           I am a graduate Machine Learning researcher at the <a href="https://bucci.mit.edu/" target="_blank">MIT Red Lab</a>, working under the supervision of Professors <a href="https://web.mit.edu/nse/people/faculty/bucci.html" target="_blank">Matteo Bucci</a> and 
-          <a href="https://web.mit.edu/nse/people/faculty/jossou.html" target="_blank">Ericmoore Jossou</a>. My research interests lie in the intersection of computer vision and large vision-language models towards developing generalizable multimodal AI for social good.
+          <a href="https://web.mit.edu/nse/people/faculty/jossou.html" target="_blank">Ericmoore Jossou</a>. My research interests revolve around predictive machine learning and large vision-language models towards developing generalizable multimodal AI for social good.
         </p>
         <p>
-          Before joining MIT, I received my Bachelor of Engineering degree at the University of Nigeria Nsukka fortunate to be supervised by Professors Chigbo Mgbemene, Howard Njoku, and Chigbogu Ozoegwu. 
+          Before joining MIT, I received my Bachelor of Engineering degree at the University of Nigeria Nsukka fortunate to be supervised by Professors <a href="https://africanscientists.africa/business-directory/mgbemene/" target="_blank">Chigbo Mgbemene</a>, <a href="https://africanscientists.africa/business-directory/njoku/" target="_blank">Howard Njoku</a>, and <a href="https://www.africansinstem.co.uk/engr-dr-chigbogu-g-ozoegwu.html" target="_blank">Chigbogu Ozoegwu</a>. 
           After that, I founded the <a href="https://sites.google.com/view/artificialintelligencelab/home" target="_blank">Artificial Intelligence Laboratory</a> where I lead research on developing AI models for social good.
-        </p>
-       </div>
+        </p>  
+        <!-- Social Links Section -->          
+        <div class="social-links">
+          <a href="https://github.com/chikap421" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/chika-maduabuchi-4796701b1/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:chikap421@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="https://scholar.google.com/citations?hl=en&user=RpmxOsMAAAAJ&view_op=list_works&sortby=pubdate" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+          <a href="https://www.researchgate.net/profile/Chika-Maduabuchi" target="_blank"><i class="fab fa-researchgate"></i></a>
+          <a href="https://twitter.com/chikamaduabuchi" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>    
+      </div>
+    </div>
+  </div>
+
+<!-- Featured Projects Section -->
+<div class="container mt-5">
+  <h2 class="mt-5 mb-4">Featured Projects</h2>
+  <div id="projects">
+    <!-- BoilSAM Project -->
+    <div class="row mb-3">
+    <div class="col-md-4">
+      <img src="path-to-project-image.jpg" alt="Project Image" class="img-fluid">
+    </div>
+    <div class="col-md-8">
+      <h3>BoilSAM</h3>
+      <p>Inspired by the <a href="https://arxiv.org/abs/2304.02643" target="_blank">Segment Anything Model</a> developed by Meta AI, I am currently developing foundation models for zero-shot generalization on large scale boiling datasets. This will enable accurate real-time segmentation to facilitate autonomous operation in various industries.</p>
+    </div>
     </div>
 
-    <h2 class="mt-5 mb-4">Featured Projects</h2>
-    <p>
-      I have worked on some open-source projects encompassing large vision and language foundation models, diffusion models, and reinforcement learning with policy gradients. 
-    </p>
-    <div id="projects">
-      <!-- Placeholder for a project; replicate this section for each project -->
-      <div class="project">
-        <h3>Project Title</h3>
-        <img src="path-to-project-image.jpg" alt="Project Image" class="project-img mb-3">
-        <p>Inspired by the <a href="https://arxiv.org/abs/2304.02643" target="_blank">Segment Anything Model</a> developed by Meta AI, I am currently developing foundation models for zero-shot generalization on large scale boiling datasets. This will enable accurate real-time segmentaion to facilitate autonomous operation in various industries.  
-          <p>
-        <h3>Project Title</h3>
-        I have devloped small GPT2 (SGPT2), a model with 0.2 M parameters finetuned on over 40 K lines of Shakesparean text. After proper finetuning, the model was able to generate novel text indistinguishable from Shakesparean text. The code to the project and the dataset used can be found here. 
-        <p>
-        <h3>Project Title</h3>
-        Similarly, I have 
-        <p>
-      <!-- Repeat for other projects -->
+    <!-- SGPT2 Project -->
+    <div class="row mb-3">
+      <div class="col-md-4">
+        <img src="path-to-project-image.jpg" alt="SGPT2 Project Image" class="img-fluid">
+      </div>
+      <div class="col-md-8">
+        <h3>SGPT2</h3>
+        <p>I have developed Small GPT2 (SGPT2), a model with 0.2 M parameters fine-tuned on over 40 K lines of Shakespearean text. After proper fine-tuning, the model was able to generate novel text indistinguishable from Shakespearean text. The code and dataset used can be found on <a href="https://github.com/chikap421/sgpt2" target="_blank">GitHub</a>.</p>
+      </div>
     </div>
-    
-    <h2 class="my-4">Connect with Me</h2>
-    <div class="social-links">
-      <a href="https://github.com/chikap421" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/chika-maduabuchi-4796701b1/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:chikap421@gmail.com"><i class="fas fa-envelope"></i></a>
-      <a href="https://scholar.google.com/citations?hl=en&user=RpmxOsMAAAAJ&view_op=list_works&sortby=pubdate" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-      <a href="https://www.researchgate.net/profile/Chika-Maduabuchi" target="_blank"><i class="fab fa-researchgate"></i></a>
-      <a href="https://twitter.com/chikamaduabuchi" target="_blank"><i class="fab fa-twitter"></i></a>
-    </div>    
+
+    <!-- DDPM Project -->
+    <div class="row mb-3">
+      <div class="col-md-4">
+        <img src="path-to-project-image.jpg" alt="DDPM Project Image" class="img-fluid">
+      </div>
+      <div class="col-md-8">
+        <h3>DDPM</h3>
+        <p>Similarly, I have worked on developing Denoising Diffusion Probabilistic Models (DDPM) for generating high-fidelity images. This project explores the potentials of diffusion models in creating realistic images and their applications in various domains. More details can be found on <a href="https://github.com/chikap421/ddpm" target="_blank">GitHub</a>.</p>
+      </div>
+    </div>
+
+    <!-- RLPG Project -->
+    <div class="row mb-3">
+      <div class="col-md-4">
+        <img src="path-to-project-image.jpg" alt="RLPG Project Image" class="img-fluid">
+      </div>
+      <div class="col-md-8">
+        <h3>RLPG</h3>
+        <p>Exploring reinforcement learning, I developed models that utilize policy gradients to solve complex decision-making tasks. This project highlights the use of reinforcement learning in navigating environments and optimizing strategies for goal achievement. See the project on <a href="https://github.com/chikap421/rlpg" target="_blank">GitHub</a>.</p>
+      </div>
+    </div>
+
+    <!-- ML4Solar Project -->
+    <div class="row mb-3">
+      <div class="col-md-4">
+        <img src="path-to-project-image.jpg" alt="ML4Solar Project Image" class="img-fluid">
+      </div>
+      <div class="col-md-8">
+        <h3>ML4Solar</h3>
+        <p>My work on ML4Solar involves using machine learning algorithms to optimize solar energy collection and usage. This project aims at improving the efficiency and reliability of solar power systems through intelligent data analysis and predictive modeling. Project details are available on <a href="https://github.com/chikap421/ml4solar" target="_blank">GitHub</a>.</p>
+      </div>
+    </div>
   </div>
+</div>
+
 
   <footer>
     <p>&copy; 2024 Chika Maduabuchi</p>
