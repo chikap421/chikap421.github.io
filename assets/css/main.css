@@ -3,24 +3,60 @@ body {
     padding-top: 56px;
 }
 
-.social-links a {
-    margin-right: 15px;
-    color: #007bff;
-    font-size: 30px; /* Increased icon size */
+.masthead {
+    height: 100vh;
+    background: linear-gradient(to right, #4b79a1, #283e51);
+    color: white;
 }
 
-.rounded-circle {
+.masthead-avatar {
     width: 250px;
     height: 250px;
+    border-radius: 50%;
     object-fit: cover;
-    border-radius: 50%; /* Ensures the image is circular */
-    margin-bottom: 20px; /* Adds some space below the image */
 }
 
-footer {
-    margin-top: 40px;
-    background: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.footer {
+    background: #343a40;
+}
+
+.navbar-dark .navbar-brand {
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #d4d4d4;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h4 {
+    font-size: 1.75rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+p.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.list-unstyled li {
+    margin-bottom: 1rem;
 }

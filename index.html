@@ -12,117 +12,106 @@
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Chika Maduabuchi</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <div class="container mt-5">
-        <div class="row g-3 align-items-center">
-            <div class="col-md-4 text-center">
-                <img src="https://i.ibb.co/f1bz9Zt/Chika-Maduabuchi-Passport-Carton.jpg" alt="Chika Maduabuchi" class="img-fluid rounded-circle mb-4">
+    <header class="masthead text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <img class="masthead-avatar mb-5 rounded-circle" src="https://i.ibb.co/f1bz9Zt/Chika-Maduabuchi-Passport-Carton.jpg" alt="Chika Maduabuchi">
+            <h1 class="masthead-heading text-uppercase mb-0">Chika Maduabuchi</h1>
+            <p class="masthead-subheading font-weight-light mb-0">AI/ML Researcher</p>
+        </div>
+    </header>
+
+    <section id="about" class="bg-light text-dark py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>About Me</h2>
+                    <p class="lead">
+                        I am an AI/ML researcher with a focus on Large Language Models (LLMs), Large Vision Models (LVMs), and Large Language-Vision Models (LLVMs). I am currently collaborating with Ontario Tech University, where I work on enhancing AI models for real-world applications. My academic journey includes a Master of Science in Nuclear Science and Engineering from MIT and a Bachelor of Engineering in Mechanical Engineering from the University of Nigeria. My research interests span computer vision, natural language processing, and the development of multimodal models integrating these domains to solve complex problems.
+                    </p>
+                </div>
             </div>
-            <div class="col-md-8">
-                <h1>Chika Maduabuchi</h1>
-                <h3>Researcher in AI/ML</h3>
-                <h4>Research Collaborator at Ontario Tech University</h4>
-                <p>
-                    Office: SIRC-3388, <a href="https://calendar.google.com">Calendar</a>, <a href="https://scholar.google.com">Scholar</a>, <a href="https://www.linkedin.com/in/chika-maduabuchi-4796701b1/">LinkedIn</a>, <a href="https://github.com/chikap421">GitHub</a>, Email: <a href="mailto:chika.maduabuchi.191341@unn.edu.ng">chika.maduabuchi.191341@unn.edu.ng</a>
-                </p>
+        </div>
+    </section>
+
+    <section id="news" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>News</h2>
+                    <ul class="list-unstyled">
+                        <li>June 2024: Started collaboration with Ontario Tech University.</li>
+                        <li>May 2024: Presented at MIT AI Conference on VideoSAM model.</li>
+                        <li>April 2024: Published paper on AfriInstruct at ACL 2024.</li>
+                        <li>March 2024: Keynote speaker at African AI Summit.</li>
+                    </ul>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="mt-5">
-            <h2>About Me</h2>
-            <p>
-                I am an AI/ML researcher with a focus on Large Language Models (LLMs), Large Vision Models (LVMs), and Large Language-Vision Models (LLVMs). I am currently collaborating with Ontario Tech University, focusing on enhancing AI models for real-world applications.
-            </p>
+    <section id="publications" class="bg-light text-dark py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Publications</h2>
+                    <ul class="list-unstyled">
+                        <li>
+                            <h4>VideoSAM: A Large Vision Foundation Model for High-Speed Video Segmentation</h4>
+                            <p>Chika Maduabuchi, Ericmoore Jossou, Matteo Bucci, 17th Asian Conference on Computer Vision (ACCV 2024), submitted.</p>
+                            <img src="path-to-graphical-abstract1.jpg" alt="Graphical Abstract for VideoSAM" class="img-fluid mb-3">
+                        </li>
+                        <li>
+                            <h4>AfriInstruct: Instruction Tuning of African Languages for Diverse Tasks</h4>
+                            <p>Kosei Uemura, Alex Pejovic, Mahe Chen, Chika Maduabuchi, Yifei Sun, En-Shiun Annie Lee, The 62nd Annual Meeting of the Association for Computational Linguistics (ACL 2024), submitted.</p>
+                            <img src="path-to-graphical-abstract2.jpg" alt="Graphical Abstract for AfriInstruct" class="img-fluid mb-3">
+                        </li>
+                        <li>
+                            <h4>RAMD: Retrieval-Augmented Multimodal Diffusion for Efficient Text-to-Image Generation</h4>
+                            <p>Chika Maduabuchi, 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025), In progress.</p>
+                            <img src="path-to-graphical-abstract3.jpg" alt="Graphical Abstract for RAMD" class="img-fluid mb-3">
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="mt-5">
-            <h2>Academic Journey</h2>
-            <p>
-                <strong>Massachusetts Institute of Technology (MIT)</strong> - Master of Science in Nuclear Science and Engineering, 2024<br>
-                <strong>University of Nigeria</strong> - Bachelor of Engineering in Mechanical Engineering, 2019
-            </p>
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Contact</h2>
+                    <p>
+                        Phone: +1 617 821 8696<br>
+                        Email: <a href="mailto:chika.maduabuchi.191341@unn.edu.ng">chika.maduabuchi.191341@unn.edu.ng</a><br>
+                        LinkedIn: <a href="https://www.linkedin.com/in/chika-maduabuchi-4796701b1/">Chika Maduabuchi</a>
+                    </p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="mt-5">
-            <h2>Career Experience</h2>
-            <p>
-                <strong>Research Collaborator</strong> - Ontario Tech University, June 2024 – Present<br>
-                <strong>Research Fellow</strong> - Massachusetts Institute of Technology, September 2022 – May 2024<br>
-                <strong>Research Lead - AI Lab</strong> - University of Nigeria, Nsukka, October 2021 – August 2022<br>
-                <strong>Teaching Assistant</strong> - University of Agriculture, Makurdi, April 2021 – September 2021<br>
-                <strong>Teaching Assistant</strong> - University of Nigeria, Nsukka, June 2018 – September 2020<br>
-                <strong>Machine Learning Engineer</strong> - March 2018 – August 2018
-            </p>
+    <footer class="footer bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 Chika Maduabuchi</p>
         </div>
-
-        <div class="mt-5">
-            <h2>Research Interests</h2>
-            <p>
-                My research interests include computer vision, natural language processing, and the development of multimodal models that integrate these domains. I focus on applying advanced AI models to solve real-world problems, such as efficient video segmentation, language model tuning for low-resource languages, and enhanced text-to-image generation.
-            </p>
-        </div>
-
-        <div class="mt-5">
-            <h2>News</h2>
-            <ul>
-                <li>June 2024: Started collaboration with Ontario Tech University.</li>
-                <li>May 2024: Presented at MIT AI Conference on VideoSAM model.</li>
-                <li>April 2024: Published paper on AfriInstruct at ACL 2024.</li>
-                <li>March 2024: Keynote speaker at African AI Summit.</li>
-            </ul>
-        </div>
-
-        <div class="mt-5">
-            <h2>Publications</h2>
-            <ul>
-                <li>
-                    <strong>VideoSAM: A Large Vision Foundation Model for High-Speed Video Segmentation</strong><br>
-                    Chika Maduabuchi, Ericmoore Jossou, Matteo Bucci, 17th Asian Conference on Computer Vision (ACCV 2024), submitted.<br>
-                    <img src="path-to-graphical-abstract1.jpg" alt="Graphical Abstract for VideoSAM" class="img-fluid">
-                </li>
-                <li>
-                    <strong>AfriInstruct: Instruction Tuning of African Languages for Diverse Tasks</strong><br>
-                    Kosei Uemura, Alex Pejovic, Mahe Chen, Chika Maduabuchi, Yifei Sun, En-Shiun Annie Lee, The 62nd Annual Meeting of the Association for Computational Linguistics (ACL 2024), submitted.<br>
-                    <img src="path-to-graphical-abstract2.jpg" alt="Graphical Abstract for AfriInstruct" class="img-fluid">
-                </li>
-                <li>
-                    <strong>RAMD: Retrieval-Augmented Multimodal Diffusion for Efficient Text-to-Image Generation</strong><br>
-                    Chika Maduabuchi, 39th Annual AAAI Conference on Artificial Intelligence (AAAI 2025), In progress.<br>
-                    <img src="path-to-graphical-abstract3.jpg" alt="Graphical Abstract for RAMD" class="img-fluid">
-                </li>
-            </ul>
-        </div>
-
-        <div class="mt-5">
-            <h2>Honors & Awards</h2>
-            <ul>
-                <li>MTN Science and Technology Scholarship Scheme Award</li>
-                <li>Agbami Medical and Engineering Professional Scholarship Award</li>
-                <li>Rhodes Scholarship Finalist (University of Oxford)</li>
-                <li>Mathworks Fellowship in Computer Vision</li>
-            </ul>
-        </div>
-
-        <div class="mt-5">
-            <h2>Contact</h2>
-            <p>
-                Phone: +1 617 821 8696<br>
-                Email: <a href="mailto:chika.maduabuchi.191341@unn.edu.ng">chika.maduabuchi.191341@unn.edu.ng</a><br>
-                LinkedIn: <a href="https://www.linkedin.com/in/chika-maduabuchi-4796701b1/">Chika Maduabuchi</a>
-            </p>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Chika Maduabuchi</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
