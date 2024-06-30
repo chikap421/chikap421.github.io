@@ -1,38 +1,43 @@
 body {
     font-family: 'Open Sans', sans-serif;
     padding-top: 56px;
-    color: #333;
 }
 
 .masthead {
     height: 100vh;
-    background: linear-gradient(to right, #4b79a1, #283e51);
+    background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .masthead-avatar {
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    object-fit: cover;
 }
 
-.bg-light {
-    background-color: #f8f9fa !important;
-}
-
-.footer {
-    background: #343a40;
-}
-
-.navbar-dark .navbar-brand {
-    color: #ffffff;
+.masthead-heading {
     font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
-.navbar-dark .navbar-nav .nav-link {
+.masthead-subheading {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.contact-info a {
     color: #ffffff;
+    font-size: 2rem;
+    margin: 0 10px;
+}
+
+.contact-info a:hover {
+    color: #0056b3;
 }
 
 .section-heading {
@@ -48,16 +53,6 @@ body {
 
 .list-unstyled li {
     margin-bottom: 1rem;
-}
-
-.text-center p i {
-    font-size: 2rem;
-    margin: 0 10px;
-    color: #007bff;
-}
-
-.text-center p i:hover {
-    color: #0056b3;
 }
 
 .img-fluid {
