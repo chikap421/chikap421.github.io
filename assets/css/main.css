@@ -1,0 +1,26 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 56px;
+}
+
+.social-links a {
+    margin-right: 15px;
+    color: #007bff;
+    font-size: 30px; /* Increased icon size */
+}
+
+.rounded-circle {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%; /* Ensures the image is circular */
+    margin-bottom: 20px; /* Adds some space below the image */
+}
+
+footer {
+    margin-top: 40px;
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
