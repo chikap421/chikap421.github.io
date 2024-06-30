@@ -1,6 +1,7 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif;
     padding-top: 56px;
+    color: #333;
 }
 
 .masthead {
@@ -39,12 +40,14 @@ body {
 h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
+    font-weight: 700;
 }
 
 h4 {
     font-size: 1.75rem;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+    font-weight: 700;
 }
 
 p.lead {
@@ -59,4 +62,14 @@ p.lead {
 
 .list-unstyled li {
     margin-bottom: 1rem;
+}
+
+.text-center p i {
+    font-size: 2rem;
+    margin: 0 10px;
+    color: #007bff;
+}
+
+.text-center p i:hover {
+    color: #0056b3;
 }
