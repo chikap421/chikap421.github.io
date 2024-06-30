@@ -92,14 +92,18 @@ body {
 h4 {
     font-family: 'Merriweather', serif;
     font-weight: 700;
-    margin-top: 1rem;
 }
 
 footer {
-    background-color: #f8f9fa;
+    background-color: #343a40;
+    color: #f8f9fa;
     text-align: center;
     padding: 1rem 0;
     font-size: 1rem;
+}
+
+footer p {
+    margin: 0;
 }
 
 .prof-link {
