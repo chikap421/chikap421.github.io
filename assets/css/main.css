@@ -46,6 +46,11 @@ body {
     font-size: 1.25rem;
 }
 
+.about-me a.prof-link {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
 .section-heading {
     font-family: 'Merriweather', serif;
     font-weight: 700;
@@ -92,8 +97,16 @@ h4 {
 
 footer {
     background-color: #f8f9fa;
-    padding: 1rem 0;
     text-align: center;
+    padding: 1rem 0;
     font-size: 1rem;
-    border-top: 1px solid #e9ecef;
+}
+
+.prof-link {
+    color: #ffffff;
+}
+
+.prof-link:hover {
+    color: #ffcc00;
+    text-decoration: underline;
 }
