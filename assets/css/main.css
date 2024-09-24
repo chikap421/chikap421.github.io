@@ -1,14 +1,21 @@
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #ffffff;
+    --font-family-main: 'Merriweather', serif;
+    --font-size-heading: 2.5rem;
+    --font-size-subheading: 1.5rem;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-top: 56px;
     margin: 0;
     background-color: #f8f9fa;
     color: #212529;
 }
 
 .masthead {
-    background-color: #0056b3;
-    color: #ffffff;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: 2rem 0;
     text-align: center;
 }
@@ -20,78 +27,28 @@ body {
 }
 
 .masthead-heading {
-    font-family: 'Merriweather', serif;
-    font-size: 2.5rem;
+    font-family: var(--font-family-main);
+    font-size: var(--font-size-heading);
     font-weight: 700;
 }
 
 .masthead-subheading {
-    font-family: 'Merriweather', serif;
-    font-size: 1.5rem;
+    font-family: var(--font-family-main);
+    font-size: var(--font-size-subheading);
     font-weight: 400;
 }
 
 .contact-info a {
-    color: #ffffff;
+    color: var(--secondary-color);
     font-size: 1.5rem;
     margin: 0 10px;
 }
 
-.contact-info a:hover {
-    color: #ffcc00;
-}
-
-.about-me {
-    margin-top: 1rem;
-    font-size: 1.25rem;
-}
-
-.about-me a.prof-link {
-    color: #ffffff;
-    text-decoration: underline;
-}
-
 .section-heading {
-    font-family: 'Merriweather', serif;
+    font-family: var(--font-family-main);
     font-weight: 700;
     margin-bottom: 1.5rem;
     text-align: center;
-}
-
-.news-section, .publications-section {
-    padding: 2rem 0;
-}
-
-.list-unstyled {
-    padding-left: 0;
-    list-style: none;
-    font-size: 1.25rem;
-}
-
-.list-unstyled li {
-    margin-bottom: 1rem;
-}
-
-.publication-links a {
-    margin-right: 1rem;
-    color: #0056b3;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.publication-links a:hover {
-    text-decoration: underline;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-h4 {
-    font-family: 'Merriweather', serif;
-    font-weight: 700;
 }
 
 footer {
@@ -102,15 +59,31 @@ footer {
     font-size: 1rem;
 }
 
-footer p {
-    margin: 0;
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.prof-link {
-    color: #ffffff;
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
 }
 
-.prof-link:hover {
-    color: #ffcc00;
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0056b3;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: #333333;
+}
+
+.card a {
+    color: #0056b3;
     text-decoration: underline;
 }
