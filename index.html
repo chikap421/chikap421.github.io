@@ -6,22 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chika Maduabuchi - AI/ML Researcher</title>
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS for modern styling -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-    <!-- fullPage.js for sliding sections -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" />
-
-    <!-- GSAP for smooth animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-
-    <!-- Chart.js for dynamic research stats -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Font Awesome for Social Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
+    <!-- GSAP for smooth animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
     <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
         .bio img {
             width: 40px;
             height: 40px;
@@ -53,6 +57,54 @@
             box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
         }
 
+        header {
+            background-color: #1a202c;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 0.75rem 0;
+        }
+
+        header nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        header nav ul li a:hover {
+            color: #ffbb28;
+        }
+
+        header nav ul li a.active {
+            color: #ffbb28;
+        }
+
+        /* General section padding */
+        section {
+            padding: 4rem 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a202c;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 1rem;
+        }
+
         @media (max-width: 640px) {
             .text-4xl {
                 font-size: 2rem;
@@ -74,143 +126,127 @@
 </head>
 
 <body>
-    <!-- Header for navigation -->
-    <header class="bg-blue-600 fixed w-full top-0 z-50">
-        <nav class="container mx-auto p-4 flex justify-between items-center">
-            <div class="text-white text-lg font-bold">Chika Maduabuchi</div>
-            <ul class="flex space-x-4">
-                <li><a href="#bio" class="text-white hover:underline">Bio</a></li>
-                <li><a href="#news" class="text-white hover:underline">News</a></li>
-                <li><a href="#projects" class="text-white hover:underline">Projects</a></li>
-                <li><a href="#stats" class="text-white hover:underline">Research Stats</a></li>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#bio" class="nav-link">Bio</a></li>
+                <li><a href="#news" class="nav-link">News</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <div id="fullpage" class="mt-16">
-        <!-- Bio Section -->
-        <section id="bio" class="section bg-gradient-to-r from-blue-500 to-purple-600 text-white p-16">
-            <div class="container mx-auto text-center">
-                <img src="assets/img/profile/Chika_Maduabuchi_PassportCarton.jpg" alt="Chika Maduabuchi"
-                    class="mx-auto rounded-full w-40 h-40 mb-4">
-                <h1 class="text-4xl font-bold">Chika Maduabuchi</h1>
-                <h2 class="text-2xl mt-4 font-semibold">AI/ML Researcher 🚀</h2>
-                <p class="bio">
-                    I'm a researcher passionate about advancing AI in computer vision and natural language processing.
-                    Recent work includes large vision models and contributions to low-resource NLP.
-                </p>
-                <div class="social-icons flex justify-center mt-4">
-                    <a href="mailto:chikap421@gmail.com" title="Email Me">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/chika-maduabuchi-4796701b1" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/chikap421" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://openreview.net/profile?id=~Chika_Maduabuchi1" title="OpenReview">
-                        <i class="fas fa-user-circle"></i>
-                    </a>
+    <!-- Bio Section -->
+    <section id="bio" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-center">
+        <div class="container mx-auto">
+            <img src="assets/img/profile/Chika_Maduabuchi_PassportCarton.jpg" alt="Chika Maduabuchi" class="rounded-full w-40 h-40 mb-4 mx-auto">
+            <h1 class="text-4xl font-bold">Chika Maduabuchi</h1>
+            <h2 class="text-2xl mt-4 font-semibold">AI/ML Researcher 🚀</h2>
+            <p class="bio mt-4">
+                I'm a researcher passionate about advancing AI in computer vision and natural language processing. Recent work includes large vision models and contributions to low-resource NLP.
+            </p>
+            <div class="social-icons flex justify-center mt-4">
+                <a href="mailto:chikap421@gmail.com" title="Email Me"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/chika-maduabuchi-4796701b1" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/chikap421" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://openreview.net/profile?id=~Chika_Maduabuchi1" title="OpenReview"><i class="fas fa-user-circle"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="bg-white text-center">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8">📢 Latest News & Updates</h2>
+            <div class="bg-gray-100 rounded-lg shadow-lg p-6 mb-4">
+                <p>1 paper accepted to EMNLP 24 🎉</p>
+            </div>
+            <div class="bg-gray-100 rounded-lg shadow-lg p-6">
+                <p>1 paper submitted to CVDC at ACCV 24 🚀</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Projects Section -->
+    <section id="projects" class="bg-gradient-to-r from-green-400 to-blue-500 text-white text-center">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8">🌟 Research Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card bg-white text-black rounded-lg shadow-lg p-6">
+                    <img src="assets/img/research/videosam_project.jpg" alt="VideoSAM Project Image" class="mb-4 mx-auto">
+                    <h3 class="text-xl font-semibold">VideoSAM</h3>
+                    <p class="text-sm mb-2">Large Vision Model for High-Speed Video Segmentation.</p>
+                    <a href="https://github.com/chikap421/videosam" class="text-blue-600">GitHub Code</a> |
+                    <a href="https://github.com/chikap421/videosam/blob/main/paper/VIDEOSAM_CV4DC.pdf" class="text-blue-600">Read the Paper</a>
+                </div>
+
+                <div class="card bg-white text-black rounded-lg shadow-lg p-6">
+                    <img src="assets/img/research/afriinstruct_project.jpg" alt="AfriInstruct Project Image" class="mb-4 mx-auto">
+                    <h3 class="text-xl font-semibold">AfriInstruct</h3>
+                    <p class="text-sm mb-2">Instruction tuning for African languages and NLP tasks.</p>
+                    <a href="https://github.com/AfricanLlama/AfricanNLP/tree/master" class="text-blue-600">GitHub Code</a> |
+                    <a href="https://github.com/chikap421/AfriIT_EMNLP.pdf" class="text-blue-600">Download Paper</a>
+                </div>
+
+                <div class="card bg-white text-black rounded-lg shadow-lg p-6">
+                    <img src="assets/img/research/renewable_energy.jpg" alt="Renewable Energy Project Image" class="mb-4 mx-auto">
+                    <h3 class="text-xl font-semibold">Renewable Energy Potential Estimation</h3>
+                    <p class="text-sm mb-2">Machine-learning-inspired forecasting of weather for renewable energy systems.</p>
+                    <a href="https://doi.org/10.3390/en16041603" class="text-blue-600">Read the Paper</a>
+                </div>
+
+                <div class="card bg-white text-black rounded-lg shadow-lg p-6">
+                    <img src="assets/img/research/multiobjective_optimization.jpg" alt="CPV-TE System Project Image" class="mb-4 mx-auto">
+                    <h3 class="text-xl font-semibold">Multiobjective Optimization for CPV-TE</h3>
+                    <p class="text-sm mb-2">Optimization of CPV-TE system's 3E performance using MOGA.</p>
+                    <a href="https://doi.org/10.1155/2023/6418897" class="text-blue-600">Read the Paper</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- News Section -->
-        <section id="news" class="section bg-light p-16">
-            <div class="container mx-auto text-center">
-                <h2 class="text-3xl font-bold mb-8">📢 Latest News & Updates</h2>
-                <div class="bg-white rounded-lg shadow-lg p-6 mb-4">
-                    <p>1 paper accepted to EMNLP 24 🎉</p>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <p>1 paper submitted to CVDC at ACCV 24 🚀</p>
-                </div>
+    <!-- Contact Section -->
+    <section id="contact" class="bg-white text-center">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8">💬 Get in Touch</h2>
+            <p class="bio">
+                Feel free to reach out to me for collaborations, research inquiries, or general networking. I am always open to new and exciting projects!
+            </p>
+            <div class="social-icons flex justify-center mt-4">
+                <a href="mailto:chikap421@gmail.com" title="Email Me"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/chika-maduabuchi-4796701b1" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/chikap421" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://openreview.net/profile?id=~Chika_Maduabuchi1" title="OpenReview"><i class="fas fa-user-circle"></i></a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Research Projects Section -->
-        <section id="projects" class="section bg-gradient-to-r from-green-400 to-blue-500 p-16">
-            <div class="container mx-auto text-center">
-                <h2 class="text-3xl font-bold mb-8">🌟 Research Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl">
-                        <img src="assets/img/research/videosam_project.jpg" alt="VideoSAM Project Image" class="w-48 mx-auto mb-4">
-                        <h3 class="text-xl font-semibold">VideoSAM</h3>
-                        <p class="text-sm mb-2">Large Vision Model for High-Speed Video Segmentation.</p>
-                        <a href="https://github.com/chikap421/videosam" class="text-blue-600">GitHub Code</a> |
-                        <a href="https://github.com/chikap421/videosam/blob/main/paper/VIDEOSAM_CV4DC.pdf"
-                            class="text-blue-600">Read the Paper</a>
-                    </div>
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Chika Maduabuchi. All Rights Reserved.</p>
+    </footer>
 
-                    <div class="card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl">
-                        <img src="assets/img/research/afriinstruct_project.jpg" alt="AfriInstruct Project Image" class="w-48 mx-auto mb-4">
-                        <h3 class="text-xl font-semibold">AfriInstruct</h3>
-                        <p class="text-sm mb-2">Instruction tuning for African languages and NLP tasks.</p>
-                        <a href="https://github.com/AfricanLlama/AfricanNLP/tree/master" class="text-blue-600">GitHub Code</a> |
-                        <a href="https://github.com/chikap421/AfriIT_EMNLP.pdf" class="text-blue-600">Download Paper</a>
-                    </div>
-
-                    <div class="card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl">
-                        <img src="assets/img/research/renewable_energy.jpg" alt="Renewable Energy Project Image"
-                            class="w-48 mx-auto mb-4">
-                        <h3 class="text-xl font-semibold">Renewable Energy Potential Estimation</h3>
-                        <p class="text-sm mb-2">Machine-learning-inspired forecasting of weather for renewable energy systems.</p>
-                        <a href="https://doi.org/10.3390/en16041603" class="text-blue-600">Read the Paper</a>
-                    </div>
-
-                    <div class="card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl">
-                        <img src="assets/img/research/multiobjective_optimization.jpg" alt="CPV-TE System Project Image"
-                            class="w-48 mx-auto mb-4">
-                        <h3 class="text-xl font-semibold">Multiobjective Optimization for CPV-TE</h3>
-                        <p class="text-sm mb-2">Optimization of CPV-TE system's 3E performance using MOGA.</p>
-                        <a href="https://doi.org/10.1155/2023/6418897" class="text-blue-600">Read the Paper</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Research Stats Section -->
-        <section id="stats" class="section bg-gray-900 text-white p-16">
-            <div class="container mx-auto text-center">
-                <h2 class="text-3xl font-bold mb-8">📊 Research Stats</h2>
-                <canvas id="researchStatsChart"></canvas>
-            </div>
-        </section>
-    </div>
-
-    <!-- fullPage.js for sliding sections -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
     <script>
-        new fullpage('#fullpage', {
-            autoScrolling: true,
-            scrollHorizontally: true,
+        // Smooth scroll for header navigation
+        document.querySelectorAll('header nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                document.querySelectorAll('header nav ul li a').forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+            });
         });
-    </script>
 
-    <!-- Chart.js for research stats -->
-    <script>
-        const ctx = document.getElementById('researchStatsChart').getContext('2d');
-        const researchStatsChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ['Published Papers', 'In Progress', 'Submitted'],
-                datasets: [{
-                    label: 'Research Progress',
-                    data: [8, 5, 2],
-                    backgroundColor: ['#00C49F', '#FFBB28', '#FF8042'],
-                    borderColor: ['#fff'],
-                    borderWidth: 2,
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                }
-            }
+        // GSAP for smooth animations
+        gsap.from('.card', {
+            duration: 1,
+            opacity: 0,
+            y: 50,
+            stagger: 0.3
         });
     </script>
 </body>
