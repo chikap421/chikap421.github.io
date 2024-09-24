@@ -26,12 +26,6 @@
             background-color: #f8f9fa;
         }
 
-        .bio img {
-            width: 40px;
-            height: 40px;
-            margin-right: 8px;
-        }
-
         .social-icons a {
             font-size: 24px;
             margin: 0 10px;
@@ -55,6 +49,12 @@
         .card:hover {
             transform: scale(1.05);
             box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .institutions img {
+            width: 100px;
+            height: auto;
+            margin: 0 20px;
         }
 
         header {
@@ -105,6 +105,74 @@
             font-size: 1rem;
         }
 
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            padding: 4rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #e0e0e0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-entry {
+            position: relative;
+            width: 50%;
+            padding: 2rem 4rem;
+            box-sizing: border-box;
+        }
+
+        .timeline-entry:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-entry:nth-child(even) {
+            left: 50%;
+        }
+
+        .timeline-entry .logo {
+            width: 50px;
+            height: auto;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-entry .content {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .timeline-entry .content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .timeline-entry .content p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .timeline-entry .content::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: -15px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent transparent #ffffff;
+        }
+
         @media (max-width: 640px) {
             .text-4xl {
                 font-size: 2rem;
@@ -121,6 +189,21 @@
             .card {
                 padding: 1rem;
             }
+
+            .institutions img {
+                width: 80px;
+            }
+
+            .timeline-entry {
+                width: 100%;
+                left: 0 !important;
+            }
+
+            .timeline-entry .content::before {
+                right: auto;
+                left: -15px;
+                border-color: transparent #ffffff transparent transparent;
+            }
         }
     </style>
 </head>
@@ -133,6 +216,7 @@
                 <li><a href="#bio" class="nav-link">Bio</a></li>
                 <li><a href="#news" class="nav-link">News</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
@@ -147,6 +231,7 @@
             <p class="bio mt-4">
                 I'm a researcher passionate about advancing AI in computer vision and natural language processing. Recent work includes large vision models and contributions to low-resource NLP.
             </p>
+
             <div class="social-icons flex justify-center mt-4">
                 <a href="mailto:chikap421@gmail.com" title="Email Me"><i class="fas fa-envelope"></i></a>
                 <a href="https://linkedin.com/in/chika-maduabuchi-4796701b1" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -187,7 +272,7 @@
                     <h3 class="text-xl font-semibold">AfriInstruct</h3>
                     <p class="text-sm mb-2">Instruction tuning for African languages and NLP tasks.</p>
                     <a href="https://github.com/AfricanLlama/AfricanNLP/tree/master" class="text-blue-600">GitHub Code</a> |
-                    <a href="https://1drv.ms/b/c/84d6b4093f30a08d/Ed81x3Ws5WRAg3MHmLsT--oBdxya9zWyYi-B4l7IAOscOg?e=0inSxf" class="text-blue-600">Download Paper</a>
+                    <a href="" class="text-blue-600">Download Paper</a>
                 </div>
 
                 <div class="card bg-white text-black rounded-lg shadow-lg p-6">
@@ -202,6 +287,39 @@
                     <h3 class="text-xl font-semibold">Multiobjective Optimization for CPV-TE</h3>
                     <p class="text-sm mb-2">Optimization of CPV-TE system's 3E performance using MOGA.</p>
                     <a href="https://doi.org/10.1155/2023/6418897" class="text-blue-600">Read the Paper</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="timeline">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-8 text-center">🔍 Experience Timeline</h2>
+            <div class="timeline-entry">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/59/OntarioTechUniversity_logo.svg/1200px-OntarioTechUniversity_logo.svg.png" alt="Ontario Tech" class="logo">
+                <div class="content">
+                    <h3>Applied Scientist</h3>
+                    <p>Ontario Tech University | June 2024 - Present</p>
+                    <p>Research focus on applying machine learning in energy and AI.</p>
+                </div>
+            </div>
+
+            <div class="timeline-entry">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/MIT_logo.svg" alt="MIT" class="logo">
+                <div class="content">
+                    <h3>Research Assistant</h3>
+                    <p>Massachusetts Institute of Technology | Sep 2022 - May 2024</p>
+                    <p>Conducted research in large vision models and NLP.</p>
+                </div>
+            </div>
+
+            <div class="timeline-entry">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/NCERD.png" alt="NCERD" class="logo">
+                <div class="content">
+                    <h3>Applied Scientist</h3>
+                    <p>NCERD | Mar 2018 - Aug 2018</p>
+                    <p>Internship role focused on renewable energy systems and optimization.</p>
                 </div>
             </div>
         </div>
@@ -247,6 +365,13 @@
             opacity: 0,
             y: 50,
             stagger: 0.3
+        });
+
+        gsap.from('.timeline-entry', {
+            duration: 1,
+            opacity: 0,
+            x: -100,
+            stagger: 0.5
         });
     </script>
 </body>
