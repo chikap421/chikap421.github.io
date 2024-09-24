@@ -15,13 +15,11 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/custom-theme.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
         }
 
         .emoji {
@@ -40,21 +38,11 @@
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
-            border-radius: 12px;
         }
 
         .card:hover {
             transform: scale(1.05);
             box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Circular Image */
-        .circular-img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 0 auto 16px;
-            object-fit: cover;
         }
 
         /* Responsive Design */
@@ -67,23 +55,6 @@
 
         .links-section {
             margin-top: 2rem;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-
-        .links-section a {
-            display: inline-flex;
-            align-items: center;
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-
-        .links-section a img {
-            width: 24px;
-            height: 24px;
-            margin-right: 8px;
         }
 
         /* Add smooth scroll for transitions */
@@ -105,10 +76,6 @@
             .text-4xl {
                 font-size: 2rem;
             }
-
-            .links-section {
-                flex-direction: column;
-            }
         }
     </style>
 </head>
@@ -125,18 +92,10 @@
                     I'm a researcher passionate about advancing AI in computer vision and natural language processing. Recent work includes large vision models and contributions to low-resource NLP. <span class="emoji">💻✨</span>
                 </p>
                 <div class="links-section">
-                    <a href="mailto:chikap421@gmail.com">
-                        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Logo">Email Me
-                    </a>
-                    <a href="https://linkedin.com/in/chika-maduabuchi-4796701b1">
-                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Logo">LinkedIn
-                    </a>
-                    <a href="https://github.com/chikap421">
-                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo">GitHub
-                    </a>
-                    <a href="https://openreview.net/profile?id=~Chika_Maduabuchi1">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/OpenReview_Logo.svg/512px-OpenReview_Logo.svg.png" alt="OpenReview Logo">OpenReview
-                    </a>
+                    <a href="mailto:chikap421@gmail.com" class="inline-block"><img src="assets/icons/email.png" alt="Email" class="icon"> Email Me</a>
+                    <a href="https://linkedin.com/in/chika-maduabuchi-4796701b1" class="inline-block ml-4"><img src="assets/icons/linkedin.png" alt="LinkedIn" class="icon"> LinkedIn</a>
+                    <a href="https://github.com/chikap421" class="inline-block ml-4"><img src="assets/icons/github.png" alt="GitHub" class="icon"> GitHub</a>
+                    <a href="https://openreview.net/profile?id=~Chika_Maduabuchi1" class="inline-block ml-4"><img src="assets/icons/openreview.png" alt="OpenReview" class="icon"> OpenReview</a>
                 </div>
                 <!-- Visitor counter -->
                 <div class="visitor-counter" id="visitorCounter">Total Visitors: <span id="visitorCount">0</span></div>
@@ -162,7 +121,7 @@
                 <h2 class="text-3xl font-bold mb-8">🌟 Research Projects</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl">
-                        <img src="assets/img/research/videosam_project.jpg" alt="VideoSAM Project Image" class="circular-img">
+                        <img src="assets/img/research/videosam_project.jpg" alt="VideoSAM Project Image" class="w-48 mx-auto mb-4">
                         <h3 class="text-xl font-semibold">VideoSAM</h3>
                         <p class="text-sm mb-2">Large Vision Model for High-Speed Video Segmentation.</p>
                         <a href="https://github.com/chikap421/videosam" class="text-blue-600">GitHub Code</a> |
@@ -170,22 +129,22 @@
                     </div>
 
                     <div class="card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl">
-                        <img src="assets/img/research/afriinstruct_project.jpg" alt="AfriInstruct Project Image" class="circular-img">
+                        <img src="assets/img/research/afriinstruct_project.jpg" alt="AfriInstruct Project Image" class="w-48 mx-auto mb-4">
                         <h3 class="text-xl font-semibold">AfriInstruct</h3>
                         <p class="text-sm mb-2">Instruction tuning for African languages and NLP tasks.</p>
                         <a href="https://github.com/AfricanLlama/AfricanNLP/tree/master" class="text-blue-600">GitHub Code</a> |
-                        <a href="https://onedrive.link/to/paper" class="text-blue-600">Download Paper</a>
+                        <a href="https://onedrive_link_here" class="text-blue-600">Download Paper</a>
                     </div>
 
                     <div class="card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl">
-                        <img src="assets/img/research/renewable_energy.jpg" alt="Renewable Energy Project Image" class="circular-img">
+                        <img src="assets/img/research/renewable_energy.jpg" alt="Renewable Energy Project Image" class="w-48 mx-auto mb-4">
                         <h3 class="text-xl font-semibold">Renewable Energy Potential Estimation</h3>
                         <p class="text-sm mb-2">Machine-learning-inspired forecasting of weather for renewable energy systems.</p>
                         <a href="https://doi.org/10.3390/en16041603" class="text-blue-600">Read the Paper</a>
                     </div>
 
                     <div class="card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl">
-                        <img src="assets/img/research/multiobjective_optimization.jpg" alt="CPV-TE System Project Image" class="circular-img">
+                        <img src="assets/img/research/multiobjective_optimization.jpg" alt="CPV-TE System Project Image" class="w-48 mx-auto mb-4">
                         <h3 class="text-xl font-semibold">Multiobjective Optimization for CPV-TE</h3>
                         <p class="text-sm mb-2">Optimization of CPV-TE system's 3E performance using MOGA.</p>
                         <a href="https://doi.org/10.1155/2023/6418897" class="text-blue-600">Read the Paper</a>
