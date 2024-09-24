@@ -1,0 +1,18 @@
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+.masthead.dark-mode {
+    background-color: #282828;
+}
+
+.card.dark-mode {
+    background-color: #333333;
+    color: #f0f0f0;
+}
+
+footer.dark-mode {
+    background-color: #282828;
+    color: #f0f0f0;
+}
