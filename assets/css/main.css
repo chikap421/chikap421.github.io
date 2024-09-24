@@ -1,3 +1,12 @@
+/* Additional Styles for Paper Images */
+.card-image.optimized {
+    width: 150px;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+}
+
+/* General Styling */
 :root {
     --primary-color: #0056b3;
     --secondary-color: #ffffff;
@@ -44,6 +53,13 @@ body {
     margin: 0 10px;
 }
 
+.bio {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
 .section-heading {
     font-family: var(--font-family-main);
     font-weight: 700;
@@ -65,6 +81,13 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     margin-bottom: 1.5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.card-content {
+    flex: 1;
 }
 
 .card img {

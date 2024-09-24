@@ -9,14 +9,23 @@
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS for map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
 </head>
 <body>
+    <!-- Header with Bio -->
     <header class="masthead">
         <div class="container">
             <img src="assets/img/profile/Chika_Maduabuchi_PassportCarton.jpg" alt="Chika Maduabuchi" class="profile-img">
             <div class="intro-text">
                 <h1 class="masthead-heading">CHIKA MADUABUCHI</h1>
                 <h2 class="masthead-subheading">AI/ML Researcher</h2>
+                <p class="bio">
+                    Chika Maduabuchi is a researcher focused on computer vision, natural language processing, and multimodal AI systems. 
+                    With a Master's in Nuclear Science from MIT and significant contributions to large vision models like VideoSAM, 
+                    Chika is currently working as a researcher specializing in video segmentation and low-resource language processing.
+                </p>
                 <div class="contact-info">
                     <a href="mailto:chikap421@gmail.com"><i class="fas fa-envelope"></i></a>
                     <a href="https://github.com/chikap421" target="_blank"><i class="fab fa-github"></i></a>
@@ -27,24 +36,46 @@
         </div>
     </header>
 
+    <!-- News Section -->
+    <section id="news">
+        <div class="container">
+            <h2 class="section-heading">News & Updates</h2>
+            <div class="news-item">
+                <h3>Research Paper Submitted to CVPR 2025</h3>
+                <p>
+                    Exciting news! My recent research on compositional video generation has been submitted to CVPR 2025. Stay tuned for more updates.
+                </p>
+            </div>
+            <!-- Add more news items as needed -->
+        </div>
+    </section>
+
     <!-- Research Projects Section -->
     <section id="research">
         <div class="container">
             <h2 class="section-heading">Research Projects</h2>
             <div class="card">
-                <img src="assets/img/research/videosam_project.jpg" alt="VideoSAM Project Image" class="card-image">
-                <h3 class="card-title">VideoSAM: Large Vision Model for High-Speed Video Segmentation</h3>
-                <p class="card-description">Developed a Large Vision Model (LVM) for high-speed video segmentation.</p>
-                <a href="https://github.com/chikap421/videosam" target="_blank">GitHub Code</a> |
-                <a href="https://github.com/chikap421/videosam/blob/main/paper/VIDEOSAM_CV4DC.pdf" target="_blank">Read Paper</a>
+                <img src="assets/img/research/videosam_project.jpg" alt="VideoSAM Project Image" class="card-image optimized">
+                <div class="card-content">
+                    <h3 class="card-title">VideoSAM: Large Vision Model for High-Speed Video Segmentation</h3>
+                    <p class="card-description">
+                        Developed a Large Vision Model (LVM) for high-speed video segmentation.
+                    </p>
+                    <a href="https://github.com/chikap421/videosam" target="_blank">GitHub Code</a> |
+                    <a href="https://arxiv.org/abs/submit/12345" target="_blank">Read Paper</a>
+                </div>
             </div>
 
             <div class="card">
-                <img src="assets/img/research/afriinstruct_project.jpg" alt="AfriInstruct Project Image" class="card-image">
-                <h3 class="card-title">AfriInstruct: Instruction Tuning of African Languages</h3>
-                <p class="card-description">Instruction tuning for African languages, improving low-resource NLP tasks.</p>
-                <a href="https://github.com/AfricanLlama/AfricanNLP/tree/master" target="_blank">GitHub Code</a> |
-                <a href="https://arxiv.org/abs/submit/54321" target="_blank">Read Paper</a>
+                <img src="assets/img/research/afriinstruct_project.jpg" alt="AfriInstruct Project Image" class="card-image optimized">
+                <div class="card-content">
+                    <h3 class="card-title">AfriInstruct: Instruction Tuning of African Languages</h3>
+                    <p class="card-description">
+                        Instruction tuning for African languages, improving low-resource NLP tasks.
+                    </p>
+                    <a href="https://github.com/AfricanLlama/AfricanNLP/tree/master" target="_blank">GitHub Code</a> |
+                    <a href="https://arxiv.org/abs/submit/54321" target="_blank">Read Paper</a>
+                </div>
             </div>
         </div>
     </section>
@@ -64,7 +95,7 @@
         </div>
     </footer>
 
-    <!-- Leaflet.js, Firebase SDK, and Visitor Map Script -->
+    <!-- JS Scripts -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js"></script>
