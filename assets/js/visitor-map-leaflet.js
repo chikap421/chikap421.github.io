@@ -35,6 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const visitor = visitors[visitorId];
         L.marker([visitor.latitude, visitor.longitude]).addTo(map);
       }
+    }, (error) => {
+      console.error("Error fetching visitor data from Firebase: ", error);
     });
   
     // Log the visitor's IP location using IPinfo and save to Firebase

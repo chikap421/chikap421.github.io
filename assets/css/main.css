@@ -1,6 +1,13 @@
+/* Add a container to limit the width of the page content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 /* Additional Styles for Paper Images */
 .card-image.optimized {
-    width: 120px;
+    width: 100px;  /* Further reduced the width */
     height: auto;
     float: left;
     margin-right: 20px;
