@@ -4,97 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chika Maduabuchi - AI/ML Researcher</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/custom-theme.css">
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS for modern styling -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- fullPage.js for sliding sections -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" />
+    <!-- GSAP for smooth animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <!-- Chart.js for dynamic research stats -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- Leaflet CSS for map -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/custom-theme.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .emoji {
+            font-size: 1.5rem;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+
+        .dark-mode .bg-light {
+            background-color: #333;
+        }
+
+        .card {
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        .bio {
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            text-align: center;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">  <!-- Add container to wrap the entire content -->
-        <!-- Header with Bio -->
-        <header class="masthead">
-            <div class="container">
-                <img src="assets/img/profile/Chika_Maduabuchi_PassportCarton.jpg" alt="Chika Maduabuchi" class="profile-img">
-                <div class="intro-text">
-                    <h1 class="masthead-heading">CHIKA MADUABUCHI</h1>
-                    <h2 class="masthead-subheading">AI/ML Researcher</h2>
-                    <p class="bio">
-                        I am passionate about advancing AI and machine learning, focusing on computer vision and natural language processing. My recent work includes developing large vision models, such as VideoSAM, and contributing to NLP advancements in low-resource languages. I enjoy combining multimodal AI techniques to solve real-world problems, and I am always seeking new challenges in the field.
-                    </p>
-                    <div class="contact-info">
-                        <a href="mailto:chikap421@gmail.com"><i class="fas fa-envelope"></i></a>
-                        <a href="https://github.com/chikap421" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://scholar.google.com" target="_blank"><i class="fas fa-graduation-cap"></i></a>
-                        <a href="https://www.linkedin.com/in/chika-maduabuchi-4796701b1/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!-- News Section -->
-        <section id="news">
-            <div class="container">
-                <h2 class="section-heading">News & Updates</h2>
-                <div class="news-item">
-                    <p>1 paper accepted to EMNLP 24.</p>
+    <!-- Main sections with sliding functionality -->
+    <div id="fullpage">
+        <!-- First section: Bio -->
+        <section class="section bg-gradient-to-r from-blue-500 to-purple-600 text-white p-16">
+            <div class="container mx-auto text-center">
+                <img src="assets/img/profile/Chika_Maduabuchi_PassportCarton.jpg" alt="Chika Maduabuchi" class="mx-auto rounded-full w-40 h-40 mb-4">
+                <h1 class="text-4xl font-bold">Chika Maduabuchi</h1>
+                <h2 class="text-2xl mt-4 font-semibold">AI/ML Researcher 🚀</h2>
+                <p class="bio">
+                    I'm a researcher passionate about advancing AI in computer vision and natural language processing. Recent work includes large vision models and contributions to low-resource NLP. <span class="emoji">💻✨</span>
+                </p>
+                <div class="mt-4">
+                    <a href="mailto:chikap421@gmail.com" class="text-white text-lg">📧 Email Me</a>
                 </div>
             </div>
         </section>
 
-        <!-- Research Projects Section -->
-        <section id="research">
-            <div class="container">
-                <h2 class="section-heading">Research Projects</h2>
-                <div class="card">
-                    <img src="assets/img/research/videosam_project.jpg" alt="VideoSAM Project Image" class="card-image optimized">
-                    <div class="card-content">
-                        <h3 class="card-title">VideoSAM: Large Vision Model for High-Speed Video Segmentation</h3>
-                        <p class="card-description">
-                            Developed a Large Vision Model (LVM) for high-speed video segmentation.
-                        </p>
-                        <a href="https://github.com/chikap421/videosam" target="_blank">GitHub Code</a> |
-                        <a href="https://arxiv.org/abs/submit/12345" target="_blank">Read Paper</a>
-                    </div>
+        <!-- Second section: News with Emojis -->
+        <section class="section bg-light p-16">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-8">📢 Latest News & Updates</h2>
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-4">
+                    <p>1 paper accepted to EMNLP 24 🎉</p>
                 </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <p>1 paper submitted to CVDC at ACCV 24 🚀</p>
+                </div>
+            </div>
+        </section>
 
-                <div class="card">
-                    <img src="assets/img/research/afriinstruct_project.jpg" alt="AfriInstruct Project Image" class="card-image optimized">
-                    <div class="card-content">
-                        <h3 class="card-title">AfriInstruct: Instruction Tuning of African Languages</h3>
-                        <p class="card-description">
-                            Instruction tuning for African languages, improving low-resource NLP tasks.
-                        </p>
-                        <a href="https://github.com/AfricanLlama/AfricanNLP/tree/master" target="_blank">GitHub Code</a> |
-                        <a href="https://arxiv.org/abs/submit/54321" target="_blank">Read Paper</a>
+        <!-- Third section: Research Projects with Interactive Cards -->
+        <section class="section bg-gradient-to-r from-green-400 to-blue-500 p-16">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-8">🌟 Research Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl">
+                        <img src="assets/img/research/videosam_project.jpg" alt="VideoSAM Project Image" class="w-32 mx-auto mb-4">
+                        <h3 class="text-xl font-semibold">VideoSAM</h3>
+                        <p class="text-sm mb-2">Large Vision Model for High-Speed Video Segmentation.</p>
+                        <a href="https://github.com/chikap421/videosam" class="text-blue-600">GitHub Code</a>
+                    </div>
+
+                    <div class="card bg-white rounded-lg shadow-lg p-6 hover:shadow-xl">
+                        <img src="assets/img/research/afriinstruct_project.jpg" alt="AfriInstruct Project Image" class="w-32 mx-auto mb-4">
+                        <h3 class="text-xl font-semibold">AfriInstruct</h3>
+                        <p class="text-sm mb-2">Instruction tuning for African languages and NLP tasks.</p>
+                        <a href="https://github.com/AfricanLlama/AfricanNLP/tree/master" class="text-blue-600">GitHub Code</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Visitor Map Section -->
-        <section id="visitor-map">
-            <div class="container">
-                <h2 class="section-heading">Visitor Map</h2>
-                <div id="map" style="width: 100%; height: 400px;"></div>
-                <p>Total Visitors: <span id="visitor-count"></span></p>
+        <!-- Fourth section: Dynamic Research Stats -->
+        <section class="section bg-gray-900 text-white p-16">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-8">📊 Research Stats</h2>
+                <canvas id="researchStatsChart"></canvas>
             </div>
         </section>
+    </div>
 
-        <footer>
-            <div class="container">
-                <p>© 2024 Chika Maduabuchi. All Rights Reserved.</p>
-            </div>
-        </footer>
-    </div>  <!-- End of container -->
+    <!-- fullPage.js for sliding sections -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <script>
+        new fullpage('#fullpage', {
+            autoScrolling: true,
+            scrollHorizontally: true,
+        });
+    </script>
 
-    <!-- JS Scripts -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js"></script>
-    <script src="assets/js/visitor-map-leaflet.js"></script>
+    <!-- Chart.js for research stats -->
+    <script>
+        const ctx = document.getElementById('researchStatsChart').getContext('2d');
+        const researchStatsChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Published Papers', 'In Progress', 'Submitted'],
+                datasets: [{
+                    label: 'Research Progress',
+                    data: [8, 5, 2],
+                    backgroundColor: ['#00C49F', '#FFBB28', '#FF8042'],
+                    borderColor: ['#fff'],
+                    borderWidth: 2,
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                }
+            }
+        });
+    </script>
 </body>
 </html>
