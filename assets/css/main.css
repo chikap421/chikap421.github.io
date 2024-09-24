@@ -5,11 +5,23 @@
     padding: 0 20px;
 }
 
-/* Additional Styles for Research Project Images */
-.card-image.optimized {
-    width: 100%;  
+/* Research Project Images */
+.card img {
+    width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    max-width: 200px;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design for Card Layout */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    display: block;
+    text-align: center;
 }
 
 /* General Styling */
@@ -28,52 +40,29 @@ body {
     color: #212529;
 }
 
-.masthead {
+/* Responsive Navigation Bar */
+header {
     background-color: var(--primary-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav a {
     color: var(--secondary-color);
-    padding: 2rem 0;
-    text-align: center;
-}
-
-.profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-.masthead-heading {
-    font-family: var(--font-family-main);
-    font-size: var(--font-size-heading);
-    font-weight: 700;
-}
-
-.masthead-subheading {
-    font-family: var(--font-family-main);
-    font-size: var(--font-size-subheading);
-    font-weight: 400;
-}
-
-.contact-info a {
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-    margin: 0 10px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.bio {
-    font-size: 1.1rem;
-    margin-top: 1rem;
-    text-align: center;
-    line-height: 1.6;
-}
-
-.section-heading {
-    font-family: var(--font-family-main);
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    font-size: 2.25rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 footer {
@@ -82,49 +71,6 @@ footer {
     text-align: center;
     padding: 1rem 0;
     font-size: 1rem;
-}
-
-.card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    display: block;
-    text-align: center;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.card-content {
-    flex: 1;
-}
-
-.card img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-.card-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--primary-color);
-    margin-bottom: 0.75rem;
-}
-
-.card-description {
-    font-size: 1rem;
-    color: #333333;
-    margin-bottom: 0.5rem;
-}
-
-.card a {
-    color: var(--primary-color);
-    text-decoration: underline;
-    font-weight: 500;
 }
 
 /* Link styling with icons */
