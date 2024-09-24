@@ -1,16 +1,15 @@
-/* Add a container to limit the width of the page content */
+/* Container to limit the width of the page content */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Additional Styles for Paper Images */
+/* Additional Styles for Research Project Images */
 .card-image.optimized {
-    width: 100px;  /* Further reduced the width */
+    width: 100%;  
     height: auto;
-    float: left;
-    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 /* General Styling */
@@ -58,6 +57,8 @@ body {
     color: var(--secondary-color);
     font-size: 1.5rem;
     margin: 0 10px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .bio {
@@ -72,6 +73,7 @@ body {
     font-weight: 700;
     margin-bottom: 1.5rem;
     text-align: center;
+    font-size: 2.25rem;
 }
 
 footer {
@@ -86,11 +88,13 @@ footer {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    display: block;
+    text-align: center;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card-content {
@@ -98,22 +102,67 @@ footer {
 }
 
 .card img {
-    max-width: 100%;
-    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 15px;
 }
 
 .card-title {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #0056b3;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
 }
 
 .card-description {
     font-size: 1rem;
     color: #333333;
+    margin-bottom: 0.5rem;
 }
 
 .card a {
-    color: #0056b3;
+    color: var(--primary-color);
     text-decoration: underline;
+    font-weight: 500;
+}
+
+/* Link styling with icons */
+.links-section a {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.links-section img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive Layout */
+@media (max-width: 640px) {
+    .bio {
+        font-size: 1rem;
+    }
+
+    .text-4xl {
+        font-size: 2rem;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .section-heading {
+        font-size: 1.75rem;
+    }
+
+    .links-section a {
+        font-size: 1rem;
+    }
 }
