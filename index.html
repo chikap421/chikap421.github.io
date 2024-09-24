@@ -9,9 +9,6 @@
     <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
-
     <!-- fullPage.js for sliding sections -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css" />
 
@@ -22,7 +19,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Font Awesome for Social Icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
     <style>
         .bio img {
@@ -40,6 +37,38 @@
 
         .social-icons a:hover {
             color: #ffbb28;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 640px) {
+            .text-4xl {
+                font-size: 2rem;
+            }
+
+            .text-3xl {
+                font-size: 1.75rem;
+            }
+
+            .social-icons a {
+                font-size: 18px;
+            }
+
+            .card {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
@@ -60,7 +89,7 @@
 
     <div id="fullpage" class="mt-16">
         <!-- Bio Section -->
-        <section class="section bg-gradient-to-r from-blue-500 to-purple-600 text-white p-16">
+        <section id="bio" class="section bg-gradient-to-r from-blue-500 to-purple-600 text-white p-16">
             <div class="container mx-auto text-center">
                 <img src="assets/img/profile/Chika_Maduabuchi_PassportCarton.jpg" alt="Chika Maduabuchi"
                     class="mx-auto rounded-full w-40 h-40 mb-4">
@@ -148,13 +177,6 @@
                 <canvas id="researchStatsChart"></canvas>
             </div>
         </section>
-
-        <!-- Footer -->
-        <footer class="bg-gray-800 text-white py-4 mt-8">
-            <div class="container mx-auto text-center">
-                <p>© 2024 Chika Maduabuchi. All rights reserved.</p>
-            </div>
-        </footer>
     </div>
 
     <!-- fullPage.js for sliding sections -->
