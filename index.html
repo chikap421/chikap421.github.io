@@ -21,14 +21,25 @@
     <!-- Chart.js for dynamic research stats -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- Icons for Social Links -->
-    <link rel="icon" type="image/png" href="assets/icons/favicon.ico">
+    <!-- Font Awesome for Social Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <style>
         .bio img {
             width: 40px;
             height: 40px;
             margin-right: 8px;
+        }
+
+        .social-icons a {
+            font-size: 24px;
+            margin: 0 10px;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #ffbb28;
         }
     </style>
 </head>
@@ -59,22 +70,19 @@
                     I'm a researcher passionate about advancing AI in computer vision and natural language processing.
                     Recent work includes large vision models and contributions to low-resource NLP.
                 </p>
-                <div class="links-section mt-4 flex justify-center space-x-8">
-                    <a href="mailto:chikap421@gmail.com">
-                        <img src="assets/icons/email-icon.png" alt="Email Me" class="bio">Email Me
+                <div class="social-icons flex justify-center mt-4">
+                    <a href="mailto:chikap421@gmail.com" title="Email Me">
+                        <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="https://linkedin.com/in/chika-maduabuchi-4796701b1">
-                        <img src="assets/icons/linkedin-icon.png" alt="LinkedIn" class="bio">LinkedIn
+                    <a href="https://linkedin.com/in/chika-maduabuchi-4796701b1" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/chikap421">
-                        <img src="assets/icons/github-icon.png" alt="GitHub" class="bio">GitHub
+                    <a href="https://github.com/chikap421" title="GitHub">
+                        <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://openreview.net/profile?id=~Chika_Maduabuchi1">
-                        <img src="assets/icons/openreview-icon.png" alt="OpenReview" class="bio">OpenReview
+                    <a href="https://openreview.net/profile?id=~Chika_Maduabuchi1" title="OpenReview">
+                        <i class="fas fa-user-circle"></i>
                     </a>
-                </div>
-                <div class="visitor-counter mt-4 text-lg text-white">
-                    Total Visitors: <span id="visitorCount">0</span>
                 </div>
             </div>
         </section>
@@ -145,7 +153,6 @@
         <footer class="bg-gray-800 text-white py-4 mt-8">
             <div class="container mx-auto text-center">
                 <p>© 2024 Chika Maduabuchi. All rights reserved.</p>
-                <div>Total Visitors: <span id="visitorCountFooter">0</span></div>
             </div>
         </footer>
     </div>
@@ -183,15 +190,6 @@
                 }
             }
         });
-    </script>
-
-    <!-- Visitor Counter Logic -->
-    <script>
-        let visitorCount = localStorage.getItem('visitorCount') || 0;
-        visitorCount++;
-        localStorage.setItem('visitorCount', visitorCount);
-        document.getElementById('visitorCount').innerText = visitorCount;
-        document.getElementById('visitorCountFooter').innerText = visitorCount;
     </script>
 </body>
 
